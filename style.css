@@ -187,6 +187,7 @@ input[type="submit"]{
     width: 100vw;
     padding: 0;
     gap: 2rem;
+    border-radius: 0;
   }
   .main-content,
   .img-content{
