@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+  <main>
+    <section class="form">
+      <div class="main-content">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="lists">
+          <li><p><span></span> Product discovery and building what matters</p></li>
+          <li><p><span></span> Measuring to ensure updates are a success</p></li>
+          <li><p><span></span> And much more!</p></li>
+        </ul>
+        <form id="myForm" onsubmit="validateForm(event)">
+      
+          <div class="email-section">
+            <div class="error-container">
+              <label for="email">Email address</label>
+              <span id="emailError" class="error"></span>
+            </div>
+            <input type="email" id="email" class="" name="email" placeholder="email@company.com" required>
+          </div>
+          
+          <input type="submit" value="Subscribe to monthly newsletter">
+        </form>
+      </div>
+      <div class="img-content"></div>
+    </section>
+
+    <section class="success-msg">
+      <div class="main-msg">
+        <span class="tick"></span>
+        <h1>Thanks for subscribing!</h1>
+        <p>A confirmation email has been sent to <strong class="email-user"></strong>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <button class="dismiss-btn">Dismiss message</button>
+    </section>
+  </main>
+  <!-- Stay updated!
+
+  Join 
+
+  
+  
+  
+
+  Email address
+  email@company.com
+
+  Subscribe to monthly newsletter -->
+
+  
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <!-- Thanks for subscribing!
+
+  
+  Dismiss message -->
+
+  <!-- Success message end -->
+  
+  <script src="main.js"></script>
+</body>
+</html>

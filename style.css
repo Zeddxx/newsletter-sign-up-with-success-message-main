@@ -1,0 +1,212 @@
+:root {
+  --bg-btn-nd-font: hsl(234, 29%, 20%);
+  --bg-main: hsl(235, 18%, 26%);
+  --fc-secondary: hsl(231, 7%, 60%);
+  --bg-container: hsl(0, 0%, 100%);
+
+  --ff: url("./assets/fonts/Roboto-Bold.ttf");
+}
+@font-face{
+  font-family: head-font;
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+@font-face{
+  font-family: sub-font;
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+  width: 100vw;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+main{
+  background-color: var(--bg-main);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.form{
+  height: 70vh;
+  width: 830px;
+  background: #fff;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+.main-content{
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0 1.5rem;
+}
+.main-content>h1{
+  font-size: 3.3rem;
+  font-family: head-font;
+}
+.main-content>p, .main-content ul, form{
+  font-family: sub-font;
+}
+.main-content>ul{
+  list-style: none;
+}
+.lists>li>p{
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+}
+.lists>li>p>span{
+  background: url('./assets/images/icon-list.svg') no-repeat center;
+  height: 30px;
+  width: 30px;
+}
+#myForm{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.email-section{
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+#myForm .error-container{
+  display: flex;
+  justify-content: space-between;
+}
+.error-container>label{
+  font-weight: 600;
+  font-size: .9rem;
+}
+#email{
+  width: 100%;
+  height: 8vh;
+  border-radius: .3rem;
+  font-size: 1rem;
+  padding: 0 1rem;
+  outline: none;
+  border: 1px solid var(--fc-secondary);
+  color: black;
+  background: #fff;
+}
+#email.error-mail{
+  border: 1px solid rgb(255, 39, 39);
+  background: rgba(255, 145, 145, 0.218);
+  color: rgb(255, 39, 39);
+}
+input[type="submit"]{
+  padding: 1.2rem 0;
+  font-size: 1rem;
+  font-family: sub-font;
+  background: var(--bg-btn-nd-font);
+  color: #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+.error{
+  /* color: rgb(255, 56, 56); */
+  color: rgb(255, 33, 33);
+  font-weight: 600;
+  font-size: .9rem;
+}
+.img-content{
+  width: 40%;
+  height: 100%;
+  border-radius: 1rem;
+  background: url('./assets/images/illustration-sign-up-desktop.svg') no-repeat center;
+  background-size: cover;
+}
+.form{
+  display: flex;
+}
+.success-msg{
+  height: 60vh;
+  width: 26vw;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 1.8rem;
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+}
+.success{
+  display: flex;
+}
+.hide{
+  display: none;
+}
+.main-msg{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.main-msg .tick{
+  height: 40px;
+  width: 40px;
+  background: url('./assets/images/icon-success.svg') no-repeat center;
+  background-size: contain;
+}
+.main-msg > h1{
+  font-family: head-font;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.main-msg > p{
+  font-family: sub-font;
+ font-size: .9; 
+}
+.dismiss-btn{
+  background: linear-gradient(to right, rgb(255, 0, 72) , rgb(255, 77, 0));
+  color: #fff;
+  outline: none;
+  border: none;
+  font-family: sub-font;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+@media screen and (width <= 830px){
+  .form{
+    height: 120vh;
+    flex-direction: column-reverse;
+    width: 100vw;
+    padding: 0;
+    gap: 2rem;
+  }
+  .main-content,
+  .img-content{
+    width: 100%;
+  }
+  .main-content{
+    margin-bottom: 40px;
+  }
+  .img-content{
+    background: url('./assets/images/illustration-sign-up-mobile.svg') no-repeat center;
+    background-size: cover;
+  }
+  .main-content>h1{
+    font-size: 2.4rem;
+  }
+  .success-msg{
+    height: 100vh;
+    width: 100%;
+    border-radius: 0;
+    justify-content: space-between;
+  }
+  
+}
