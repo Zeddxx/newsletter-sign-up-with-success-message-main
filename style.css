@@ -62,17 +62,23 @@ main{
 }
 .main-content>ul{
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
 }
 .lists>li>p{
   display: flex;
-  gap: .8rem;
+  gap: 1rem;
   align-items: center;
+  width: 100%;
 }
-.lists>li>p>span{
+/* .lists>li>p>span{
   background: url('./assets/images/icon-list.svg') no-repeat center;
-  height: 30px;
-  width: 30px;
-}
+  background-size: contain;
+  height: 28px;
+  width: 28px;
+} */
 #myForm{
   display: flex;
   flex-direction: column;
@@ -197,6 +203,7 @@ input[type="submit"]{
     margin-bottom: 40px;
   }
   .img-content{
+    border-radius: 0 0 1rem 1rem;
     background: url('./assets/images/illustration-sign-up-mobile.svg') no-repeat center;
     background-size: cover;
   }
